@@ -218,8 +218,10 @@ footer p { margin: 0; }
 
     .media-split {
         display: flex;
-        gap: 2rem;
-        align-items: center;
+        flex-direction: column;
+        gap: 1.5rem
     }
-    .media-split > * { flex: 1 1 0; }
-}
+    .media-split img {
+        width: 100%
+        height: auto;
+    }
