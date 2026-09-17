@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>North Star Bakery | Contact</title>
+    <title>North Star Bakery | Products</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -20,172 +20,123 @@
             <nav aria-label="Main navigation">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="about.html">About</a></li>
                     <li>
-                        <a href="contact.html" aria-current="page">
-                            Contact
+                        <a href="products.html" aria-current="page">
+                            Products
                         </a>
                     </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main id="main-content">
-        <h1>Contact and Pre-Order Requests</h1>
+        <h1>Our Bakery Products</h1>
 
         <p class="page-intro">
-            Use this form to ask a general question or request a bakery pre-order.
-            A team member can follow up about availability and pickup details.
+            Our menu changes with the seasons, but these customer favorites
+            are available regularly. Contact us to ask about current flavors,
+            larger orders, or event quantities.
         </p>
 
-        <div class="flex-group">
+        <div class="product-grid">
             <section class="card">
-                <h2>Visit the Bakery</h2>
+                <h2>Breads</h2>
+
+                <img
+                    src="Bakery_c/bakery-bread_c.png"
+                    alt="Assortment of freshly baked artisan bread loaves">
 
                 <p>
-                    125 Main Street, North Star neighborhood
-                </p>
-
-                <p>
-                    Monday-Saturday: 7:00 a.m.-4:00 p.m.<br>
-                    Sunday: 8:00 a.m.-2:00 p.m.
+                    Choose from rustic country loaves, sourdough, whole grain,
+                    and rotating seasonal breads. Typical price range:
+                    $5-$10 per loaf.
                 </p>
             </section>
 
             <section class="card">
-                <h2>Before You Submit</h2>
+                <h2>Pastries</h2>
 
                 <p>
-                    Include the items and quantities you need, your preferred pickup
-                    date, and any allergy or ingredient concerns. A request does not
-                    guarantee availability until the bakery confirms it.
+                    Our morning case includes croissants, muffins, scones,
+                    danishes, and seasonal pastries. Typical price range:
+                    $3-$7 each.
+                </p>
+            </section>
+
+            <section class="card">
+                <h2>Cakes and Celebration Desserts</h2>
+
+                <p>
+                    We offer cakes and dessert trays for birthdays, showers,
+                    office gatherings, and other celebrations. Typical price
+                    range: $30-$85, depending on size and customization.
                 </p>
             </section>
         </div>
 
         <section>
-            <h2>Send a Request</h2>
+            <h2>Signature Loaf</h2>
 
-            <form id="request-form" action="#" method="post" novalidate>
-                <fieldset>
-                    <legend>Inquiry or Pre-Order Details</legend>
+            <figure>
+                <img
+                    src="Bakery_c/bakery-signature-loaf_c.png"
+                    alt="North Star Bakery signature artisan loaf with a golden crust">
 
-                    <p>
-                        <label for="name">Name:</label>
+                <figcaption>
+                    Our Signature Loaf is baked in small batches for a crisp
+                    crust and tender center.
+                </figcaption>
+            </figure>
+        </section>
 
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            required
-                            minlength="2"
-                            maxlength="60">
+        <section class="favorite-section">
+            <h2>Save a Bakery Favorite</h2>
 
-                        <span
-                            id="name-error"
-                            class="error-message"
-                            aria-live="polite">
-                        </span>
-                    </p>
+            <p>
+                Choose an item you may want to pre-order later.
+                Your choice will be remembered on this browser.
+            </p>
 
-                    <p>
-                        <label for="email">Email:</label>
+            <p>
+                <label for="favorite-item">Favorite item:</label>
 
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            required>
+                <select id="favorite-item" name="favorite-item">
+                    <option value="">Select an item</option>
+                </select>
+            </p>
 
-                        <span
-                            id="email-error"
-                            class="error-message"
-                            aria-live="polite">
-                        </span>
-                    </p>
+            <div class="favorite-actions">
+                <button type="button" id="save-favorite">
+                    Save Favorite
+                </button>
 
-                    <p>
-                        <label for="pickup-date">Preferred pickup date:</label>
+                <button type="button" id="clear-favorite">
+                    Clear Favorite
+                </button>
+            </div>
 
-                        <input
-                            type="date"
-                            id="pickup-date"
-                            name="pickup-date"
-                            required>
+            <p
+                id="favorite-status"
+                class="favorite-status"
+                aria-live="polite">
+            </p>
+        </section>
 
-                        <span
-                            id="pickup-date-error"
-                            class="error-message"
-                            aria-live="polite">
-                        </span>
-                    </p>
+        <section>
+            <h2>Planning a Pre-Order?</h2>
 
-                    <p>
-                        <label for="request-type">Request type:</label>
+            <p>
+                Visit the Contact page to send a pre-order request with the
+                items, quantities, preferred pickup date, and any allergy or
+                ingredient concerns.
+            </p>
 
-                        <select
-                            id="request-type"
-                            name="request-type"
-                            required>
-
-                            <option value="">Select one</option>
-                            <option value="pre-order">Pre-order</option>
-                            <option value="general-question">
-                                General question
-                            </option>
-                        </select>
-
-                        <span
-                            id="request-type-error"
-                            class="error-message"
-                            aria-live="polite">
-                        </span>
-                    </p>
-
-                    <p>
-                        <label for="item-details">Item details:</label>
-
-                        <textarea
-                            id="item-details"
-                            name="item-details"
-                            rows="5"
-                            required
-                            minlength="5"
-                            maxlength="500"
-                            placeholder="Tell us which breads, pastries, cakes, or quantities you are interested in."></textarea>
-
-                        <span
-                            id="item-details-error"
-                            class="error-message"
-                            aria-live="polite">
-                        </span>
-                    </p>
-
-                    <p>
-                        <label for="allergy-notes">
-                            Allergy notes, if applicable:
-                        </label>
-
-                        <textarea
-                            id="allergy-notes"
-                            name="allergy-notes"
-                            rows="4"
-                            maxlength="300"
-                            placeholder="List any allergies or ingredient concerns."></textarea>
-                    </p>
-
-                    <button type="submit">
-                        Submit Request
-                    </button>
-
-                    <p
-                        id="form-status"
-                        aria-live="polite">
-                    </p>
-                </fieldset>
-            </form>
+            <p>
+                <a href="contact.html">Go to the Contact and Pre-Order form</a>
+            </p>
         </section>
     </main>
 
